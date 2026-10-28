@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Book your next visit at Kinde Barber Shop.">
+
+        <title>Book Your Visit | Kinde Barber Shop</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="booking.css">
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+
+        <header class="booking-header">
+
+            <a href="index.html" class="logo">
+                KINDE
+                <span>BARBER SHOP</span>
+            </a>
+
+            <a href="index.html" class="back-link">
+                <span>←</span> Back to Home
+            </a>
+
+        </header>
+
+
+        <main class="booking-main">
+
+            <!-- INTRODUCTION -->
+
+            <section class="booking-intro">
+
+                <p class="eyebrow">YOUR NEXT GREAT LOOK STARTS HERE</p>
+
+                <h1>
+                    Let's Get You
+                    <span>Booked.</span>
+                </h1>
+
+                <p>
+                    Tell us a little about your preferred appointment,
+                    then choose how you'd like to contact us.
+                </p>
+
+            </section>
+
+
+            <!-- APPOINTMENT FORM -->
+
+            <section class="appointment-section">
+
+                <form id="appointment-form">
+
+                    <div class="form-heading">
+                        <p class="form-number">01 / APPOINTMENT DETAILS</p>
+                        <h2>Tell Us About Your Visit.</h2>
+                        <p class="form-subtitle">
+                            Fill in your details and preferred appointment time.
+                        </p>
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-name">Full Name</label>
+
+                        <input type="text" id="customer-name" placeholder="Enter your full name" autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="customer-phone">Phone Number</label>
+
+                        <input type="tel" id="customer-phone" placeholder="e.g. 09XXXXXXXX" autocomplete="tel"
+                            inputmode="tel" required>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="appointment-date">Preferred Date</label>
+
+                            <input type="date" id="appointment-date" required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="appointment-time">Preferred Time</label>
+
+                            <input type="time" id="appointment-time" required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="notes">
+                            Additional Notes
+                            <span>(Optional)</span>
+                        </label>
+
+                        <textarea id="notes" rows="4" placeholder="Anything else you'd like us to know?"></textarea>
+
+                    </div>
+
+
+                    <div class="form-divider"></div>
+
+
+                    <!-- CONTACT METHOD -->
+
+                    <div class="send-heading">
+
+                        <p class="form-number">02 / CONTACT METHOD</p>
+
+                        <h2>How Would You Like to Send It?</h2>
+
+                        <p>
+                            Your appointment details will be prepared
+                            automatically in your selected app.
+                        </p>
+
+                    </div>
+
+
+                    <div class="send-options">
+
+                        <button type="button" class="send-card" data-method="whatsapp">
+
+                            <span class="send-icon">◉</span>
+                            <span>WhatsApp</span>
+                            <span class="send-arrow">↗</span>
+
+                        </button>
+
+
+                        <button type="button" class="send-card" data-method="telegram">
+
+                            <span class="send-icon">➤</span>
+                            <span>Telegram</span>
+                            <span class="send-arrow">↗</span>
+
+                        </button>
+
+
+                        <button type="button" class="send-card" data-method="sms">
+
+                            <span class="send-icon">✉</span>
+                            <span>SMS</span>
+                            <span class="send-arrow">↗</span>
+
+                        </button>
+
+                    </div>
+
+
+                    <p class="form-message" id="form-message" aria-live="polite">
+                    </p>
+
+                </form>
+
+
+                <!-- CALL OPTION -->
+
+                <div class="call-option">
+
+                    <div class="call-content">
+
+                        <p class="form-number">03 / DIRECT CONTACT</p>
+
+                        <h3>Prefer to Speak Directly?</h3>
+
+                        <p>
+                            Give us a call and arrange your appointment
+                            directly with our team.
+                        </p>
+
+                    </div>
+
+                    <a href="tel:+251900000000" class="call-button">
+                        Call Us <span>↗</span>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOOKING NOTE -->
+
+            <section class="booking-note">
+
+                <div class="note-line"></div>
+
+                <p>
+                    <span>PLEASE NOTE</span>
+
+                    Sending an appointment request does not guarantee
+                    a confirmed booking. We'll contact you to confirm
+                    your preferred date and time.
+                </p>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+
+        <footer class="booking-footer">
+
+            <div class="footer-content">
+
+                <a href="index.html" class="logo">
+                    KINDE
+                    <span>BARBER SHOP</span>
+                </a>
+
+                <p>PRECISION. STYLE. CRAFTSMANSHIP.</p>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Kinde Barber Shop. All rights reserved.</p>
+            </div>
+
+        </footer>
+
+
+        <!-- JAVASCRIPT -->
+
+        <script>
+
+            const appointmentForm =
+                document.getElementById("appointment-form");
+
+            const sendButtons =
+                document.querySelectorAll(".send-card");
+
+            const dateInput =
+                document.getElementById("appointment-date");
+
+
+            // Replace this with the shop's actual number.
+            const shopPhone = "251900000000";
+
+
+            // Prevent selecting a date in the past.
+
+            const today = new Date();
+
+            const localToday = new Date(
+                today.getTime() - today.getTimezoneOffset() * 60000
+            ).toISOString().split("T")[0];
+
+            dateInput.min = localToday;
+
+
+            // Handle the messaging options.
+
+            sendButtons.forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    if (!appointmentForm.reportValidity()) {
+                        return;
+                    }
+
+
+                    // Collect form information.
+
+                    const name =
+                        document.getElementById("customer-name").value.trim();
+
+                    const phone =
+                        document.getElementById("customer-phone").value.trim();
+
+                    const date =
+                        document.getElementById("appointment-date").value;
+
+                    const time =
+                        document.getElementById("appointment-time").value;
+
+                    const notes =
+                        document.getElementById("notes").value.trim();
+
+
+                    // Prepare the appointment message.
+
+                    const message = `
+Hello Kinde Barber Shop!
+
+I would like to request an appointment.
+
+Name: ${name}
+Phone Number: ${phone}
+Preferred Date: ${date}
+Preferred Time: ${time}
+Additional Notes: ${notes || "None"}
+
+Please let me know if this time is available.
+
+Thank you!
+                `.trim();
+
+
+                    const encodedMessage = encodeURIComponent(message);
+
+                    const method = button.dataset.method;
+
+
+                    // WhatsApp
+
+                    if (method === "whatsapp") {
+
+                        const url =
+                            `https://wa.me/${shopPhone}?text=${encodedMessage}`;
+
+                        window.open(url, "_blank", "noopener,noreferrer");
+
+                    }
+
+
+                    // SMS
+
+                    else if (method === "sms") {
+
+                        const url =
+                            `sms:+${shopPhone}?body=${encodedMessage}`;
+
+                        window.location.href = url;
+
+                    }
+
+
+                    // Telegram
+
+                    else if (method === "telegram") {
+
+                        const url =
+                            `https://t.me/share/url?url=&text=${encodedMessage}`;
+
+                        window.open(url, "_blank", "noopener,noreferrer");
+
+                    }
+
+                });
+
+            });
+
+        </script>
+
+    </body>
+
+</html>

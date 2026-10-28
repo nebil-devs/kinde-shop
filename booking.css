@@ -1,0 +1,594 @@
+
+/* =========================================
+   1. RESET & GLOBAL STYLES
+========================================= */
+
+:root {
+    --bg: #11110f;
+    --bg-light: #1b1a17;
+    --bg-card: #201f1b;
+
+    --cream: #f4f0e8;
+    --gold: #c7a36a;
+    --gold-light: #ddbd8b;
+
+    --text: #e9e4da;
+    --muted: #a9a397;
+
+    --border: rgba(244, 240, 232, 0.12);
+
+    --font-heading: "Playfair Display", Georgia, serif;
+    --font-body: "DM Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================
+   2. HEADER
+========================================= */
+
+.booking-header {
+    width: min(1100px, 90%);
+    min-height: 85px;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    color: var(--cream);
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    line-height: 1;
+}
+
+.logo span {
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    margin-top: 7px;
+}
+
+.back-link {
+    color: var(--muted);
+    font-size: 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--gold);
+}
+
+.back-link span {
+    margin-right: 6px;
+}
+
+
+/* =========================================
+   3. MAIN SECTION
+========================================= */
+
+.booking-main {
+    width: min(1100px, 90%);
+    margin-inline: auto;
+    padding-block: 90px 100px;
+}
+
+.booking-intro {
+    max-width: 680px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.booking-intro h1 {
+    color: var(--cream);
+    font-family: var(--font-heading);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 22px;
+}
+
+.booking-intro h1 span {
+    color: var(--gold);
+}
+
+.booking-intro > p:last-child {
+    max-width: 550px;
+    margin-inline: auto;
+
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+
+/* =========================================
+   4. APPOINTMENT FORM
+========================================= */
+
+.appointment-section {
+    max-width: 760px;
+    margin-inline: auto;
+}
+
+#appointment-form {
+    padding: clamp(24px, 5vw, 45px);
+
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+}
+
+.form-heading {
+    margin-bottom: 35px;
+}
+
+.form-number {
+    color: var(--gold);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 13px;
+}
+
+.form-heading h2,
+.send-heading h2 {
+    color: var(--cream);
+    font-family: var(--font-heading);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.form-subtitle,
+.send-heading > p:last-child {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    color: var(--text);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.form-group label span {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 15px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0;
+
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--gold);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #77736b;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    color-scheme: dark;
+}
+
+.form-group textarea {
+    min-height: 115px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+
+/* =========================================
+   5. CONTACT METHOD
+========================================= */
+
+.form-divider {
+    height: 1px;
+    background: var(--border);
+    margin-block: 35px;
+}
+
+.send-heading {
+    margin-bottom: 25px;
+}
+
+.send-heading > p:last-child {
+    line-height: 1.7;
+}
+
+.send-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.send-card {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+
+    padding: 17px 14px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+
+    color: var(--cream);
+    font-size: 0.82rem;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition:
+        border-color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.send-card:hover {
+    background: #29271f;
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.send-icon {
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.send-arrow {
+    color: var(--gold);
+    transition: transform 0.3s ease;
+}
+
+.send-card:hover .send-arrow {
+    transform: translate(3px, -3px);
+}
+
+.form-message {
+    color: var(--gold);
+    font-size: 0.82rem;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   6. CALL OPTION
+========================================= */
+
+.call-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    margin-top: 25px;
+    padding: 28px;
+
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.call-content {
+    max-width: 480px;
+}
+
+.call-content h3 {
+    color: var(--cream);
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 9px;
+}
+
+.call-content > p:last-child {
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.call-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    padding: 14px 25px;
+
+    background: var(--gold);
+    border: 1px solid var(--gold);
+
+    color: #171510;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.call-button:hover {
+    background: transparent;
+    color: var(--gold);
+}
+
+.call-button span {
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   7. BOOKING NOTE
+========================================= */
+
+.booking-note {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+
+    max-width: 760px;
+    margin: 55px auto 0;
+}
+
+.note-line {
+    width: 2px;
+    flex-shrink: 0;
+    background: var(--gold);
+}
+
+.booking-note p {
+    color: var(--muted);
+    font-size: 0.83rem;
+    line-height: 1.9;
+}
+
+.booking-note p span {
+    display: block;
+    color: var(--gold);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   8. FOOTER
+========================================= */
+
+.booking-footer {
+    background: #0b0b0a;
+    border-top: 1px solid var(--border);
+    padding-top: 35px;
+}
+
+.footer-content,
+.footer-bottom {
+    width: min(1100px, 90%);
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.footer-content {
+    padding-bottom: 30px;
+}
+
+.footer-content > p {
+    color: var(--muted);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+}
+
+.footer-home {
+    color: var(--gold);
+    font-size: 0.78rem;
+    transition: color 0.3s ease;
+}
+
+.footer-home:hover {
+    color: var(--gold-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border);
+    padding-block: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: var(--muted);
+    font-size: 0.7rem;
+}
+
+.footer-bottom a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================
+   9. TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 700px) {
+
+    .booking-main {
+        padding-block: 70px 80px;
+    }
+
+    .booking-intro {
+        margin-bottom: 45px;
+    }
+
+    .call-option {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================
+   10. MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 550px) {
+
+    .booking-header {
+        min-height: 75px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo span {
+        font-size: 0.48rem;
+    }
+
+    .back-link {
+        font-size: 0.72rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .send-options {
+        grid-template-columns: 1fr;
+    }
+
+    .send-card {
+        padding: 17px;
+    }
+
+    .call-option {
+        padding: 23px;
+    }
+
+    .call-button {
+        width: 100%;
+    }
+
+    .footer-content,
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-content {
+        gap: 18px;
+    }
+
+    .footer-bottom {
+        gap: 8px;
+    }
+
+}
+
+
+@media (max-width: 380px) {
+
+    .booking-header,
+    .booking-main {
+        width: 92%;
+    }
+
+    .booking-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    #appointment-form {
+        padding: 22px 17px;
+    }
+
+}
+
+
